@@ -1,11 +1,11 @@
 # I need a better troubleshooting method. 
-:sad:
+That is so funny! :joy:
 
 ## Images
 
-![drawing from Me](/website/Images/Binary Picture for Web Page Design.jpg)
+![drawing from Me](/Images/Binary Picture for Web Page Design.jpg)
 
-![screenshot](/website/Images/Picture for webpage design from computer.png)
+![screenshot](/Images/Picture for webpage design from computer.png)
 
 ### Binary Code
 011110001101100111101100 011110001101100111101100 
