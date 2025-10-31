@@ -1,10 +1,11 @@
-# I need a better troubleshooting method. :sad:
+# I need a better troubleshooting method. 
+:sad:
 
 ## Images
 
-![drawing from Me](/Macintosh HD/Users/1020571/Desktop/website/Images/Binary Picture for Web Page Design.jpg)
+![drawing from Me](/website/Images/Binary Picture for Web Page Design.jpg)
 
-![screenshot](Picture for webpage design from computer.png)
+![screenshot](/website/Images/Picture for webpage design from computer.png)
 
 ### Binary Code
 011110001101100111101100 011110001101100111101100 
