@@ -1,6 +1,4 @@
-# I need a better troubleshooting method. 
-
-:sob:
+# I need a better troubleshooting method. :sob:
 
 ## Images
 
@@ -8,7 +6,7 @@
 
 ![screenshot of picture made using the cool website](/Images/binary.png)
 
-### Binary Code :triumph: 
+### Binary Code :confounded: 
  
 
 011110001101100111101100 011110001101100111101100 
