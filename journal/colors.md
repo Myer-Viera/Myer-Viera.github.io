@@ -1,12 +1,10 @@
 # I need a better troubleshooting method. :sad:
 
 ## Images
-{This is my paper drawing}
-![drawing from Myer](/Images/Binary Picture for Web Page Design.jpg)
 
-{This is my recreation}
-![screenshot Myer took](/Images/Picture for webpage design (computerized).png
-)
+![drawing from Me](/Desktop/website/Images/Binary Picture for Web Page Design.jpg)
+
+![screenshot](Picture for webpage design from computer.png)
 
 ### Binary Code
 011110001101100111101100 011110001101100111101100 
