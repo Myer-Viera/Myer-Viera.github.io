@@ -1,9 +1,9 @@
 #<h1>I need a better troubleshooting method. sad face emoji
 
 <h2>Images
-{This is my paper drawing}(/Image/Binary Picture for Web Page Design.jpg)
+{This is my paper drawing}(/Images/Binary Picture for Web Page Design.jpg)
 
-{This is my recreation}(/Image/Picture for webpage design (computerized).png
+{This is my recreation}(/Images/Picture for webpage design (computerized).png
 )
 
 <h2>Binary Code
