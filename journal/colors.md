@@ -3,11 +3,9 @@ That is so funny! :joy:
 
 ## Images
 
-![trying again](/Images/picture.jpg)
+![Drawing by me](/Images/picture.jpg)
 
-![drawing from Me] (/Images/pictre.jpg)
-
-! [screenshot](/Images/binary.png)
+![screenshot of picture made using the cool website](/Images/binary.png)
 
 ### Binary Code
 011110001101100111101100 011110001101100111101100 
