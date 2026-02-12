@@ -1,0 +1,158 @@
+
+<!DOCTYPE>
+<html lang="en"
+	<head>
+		<title>My Beutiful Face</title>
+	<style>
+		canvas{
+			border: black 5px solid;
+			}
+	</style>
+ 		<link rel="icon" href="../../favicon2.ico" type="image/x-icon">			
+	</head>
+
+	<body>
+		<h1>This is My Beutiful Face</h1>
+
+		<p>This portrait may not be completely acurate, but Im only using shapes we lerned in kindergarten.</p>
+
+		<canvas id="canvas" width="1000" height="800">
+
+		</canvas>
+			<script>	
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+			//background
+				ctx.fillStyle = "DeepSkyBlue"
+				ctx.fillRect(0, 0, 1000 , 800);
+				ctx.fill();	
+			//sun
+				ctx.fillStyle = "gold";
+				ctx.beginPath();
+				ctx.arc(900, 100, 75, 0, 2*Math.PI);
+				ctx.fill();
+			//saturn
+				ctx.fillStyle = "DarkOrange";
+				ctx.beginPath();
+				ctx.arc(100, 100, 75, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.strokeStyle = "yellow";
+				ctx.beginPath();
+				ctx.ellipse(100, 100, 100, 50, -60, 9, 2*Math.PI);
+				ctx.lineWidth = "5"
+				ctx.stroke();
+
+				ctx.strokeStyle = "DarkGoldenrod";
+				ctx.beginPath();
+				ctx.ellipse(100, 100, 110, 60, -60, 9, 2*Math.PI);
+				ctx.lineWidth = "5"
+				ctx.stroke();
+
+				ctx.strokeStyle = "LightSlateGray";
+				ctx.beginPath();
+				ctx.ellipse(100, 100, 90, 40, -60, 9, 2*Math.PI);
+				ctx.lineWidth = "5"
+				ctx.stroke();
+
+				ctx.strokeStyle = "Sienna";
+				ctx.beginPath();
+				ctx.ellipse(100, 100, 80, 30, -60, 9, 2*Math.PI);
+				ctx.lineWidth = "5"
+				ctx.stroke();
+			//shoulders
+				ctx.fillStyle = "red"
+				ctx.beginPath();
+				ctx.arc(500, 900, 300, 0, 2*Math.PI);
+				ctx.fill();
+			//head
+				ctx.fillStyle = "tan";
+				ctx.beginPath();
+				ctx.arc(500, 400, 300, 0, 2*Math.PI);
+				ctx.fill();
+			//mouth
+				ctx.strokeStyle = "red";
+				ctx.beginPath();
+				ctx.arc(500, 530, 120, 2*Math.PI, Math.PI);
+				ctx.lineWidth = "40"
+				ctx.stroke();
+			//nose
+				ctx.strokeStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.moveTo(500, 300);
+				ctx.lineTo(600, 475);	
+				ctx.lineTo(500, 475);
+				ctx.lineWidth = "5"
+				ctx.stroke();
+
+			//ears
+				ctx.fillStyle = "tan";
+				ctx.beginPath();
+				ctx.ellipse(200, 400, 150, 50, -Math.PI/2, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "tan";
+				ctx.beginPath();
+				ctx.ellipse(800, 400, 150, 50, -Math.PI/2, 0, 2*Math.PI);
+				ctx.fill();
+
+			//hair
+				ctx.strokeStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.arc(500, 300, 250, Math.PI, 2*Math.PI);
+				ctx.lineWidth = "100"
+				ctx.stroke();
+			//eyes
+				ctx.fillStyle = "white";
+				ctx.beginPath();
+				ctx.arc(625, 300, 50, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "white";
+				ctx.beginPath();
+				ctx.arc(375, 300, 50, 0, 2*Math.PI);
+				ctx.fill();
+			//iris
+				ctx.fillStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.arc(625, 300, 30, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.arc(375, 300, 30, 0, 2*Math.PI);
+				ctx.fill();
+			//pupil
+				
+				ctx.fillStyle = "Black";
+				ctx.beginPath();
+				ctx.arc(625, 300, 10, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "Black";
+				ctx.beginPath();
+				ctx.arc(375, 300, 10, 0, 2*Math.PI);
+				ctx.fill();
+			//eyebrows
+				ctx.strokeStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.moveTo(675, 235);	
+				ctx.lineTo(575, 235);
+				ctx.lineWidth = "20"
+				ctx.stroke();
+
+				ctx.strokeStyle = "SaddleBrown";
+				ctx.beginPath();
+				ctx.moveTo(425, 210);	
+				ctx.lineTo(325, 210);
+				ctx.lineWidth = "20"
+				ctx.stroke();
+			//chin
+
+			//body
+				ctx.fillStyle = "red";
+				ctx.fillRect(200, 900, 600, 200);
+			
+			</script>
+	</body>
+</html>	
