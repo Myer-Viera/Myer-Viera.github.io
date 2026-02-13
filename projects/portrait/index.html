@@ -23,13 +23,23 @@
 				const canvas = document.getElementById("canvas");
 				const ctx = canvas.getContext("2d");
 			//background
-				ctx.fillStyle = "DeepSkyBlue"
+				ctx.fillStyle = "MidnightBlue"
 				ctx.fillRect(0, 0, 1000 , 800);
 				ctx.fill();	
-			//sun
-				ctx.fillStyle = "gold";
+			//moon
+				ctx.fillStyle = "GhostWhite";
 				ctx.beginPath();
-				ctx.arc(900, 100, 75, 0, 2*Math.PI);
+				ctx.arc(900, 125, 75, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "Gainsboro";
+				ctx.beginPath();
+				ctx.arc(880, 120, 40, 0, 2*Math.PI);
+				ctx.fill();
+
+				ctx.fillStyle = "Gainsboro";
+				ctx.beginPath();
+				ctx.arc(950, 140, 20, 0, 2*Math.PI);
 				ctx.fill();
 			//saturn
 				ctx.fillStyle = "DarkOrange";
@@ -84,7 +94,6 @@
 				ctx.lineTo(500, 475);
 				ctx.lineWidth = "5"
 				ctx.stroke();
-
 			//ears
 				ctx.fillStyle = "tan";
 				ctx.beginPath();
@@ -95,7 +104,6 @@
 				ctx.beginPath();
 				ctx.ellipse(800, 400, 150, 50, -Math.PI/2, 0, 2*Math.PI);
 				ctx.fill();
-
 			//hair
 				ctx.strokeStyle = "SaddleBrown";
 				ctx.beginPath();
@@ -122,8 +130,7 @@
 				ctx.beginPath();
 				ctx.arc(375, 300, 30, 0, 2*Math.PI);
 				ctx.fill();
-			//pupil
-				
+			//pupil	
 				ctx.fillStyle = "Black";
 				ctx.beginPath();
 				ctx.arc(625, 300, 10, 0, 2*Math.PI);
@@ -147,8 +154,6 @@
 				ctx.lineTo(325, 210);
 				ctx.lineWidth = "20"
 				ctx.stroke();
-			//chin
-
 			//body
 				ctx.fillStyle = "red";
 				ctx.fillRect(200, 900, 600, 200);
