@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<title>UI elements</title>
+
+		<script sr ="../js/validate.js">
+
+		</script>
+		
+		<style>	
+			.grid{
+				display: grid;
+				height:100vh;
+				grid:
+				'head  head head'  1fr
+				'menu1 main menu2' 3fr
+				'foot  foot foot'  1fr
+				/1fr   2fr  1fr;
+
+			}	
+			#head{
+				grid-area: head;
+				width: 100%;
+				height: 100%;
+				background-color: LightSlateGray;
+				text-align: center;
+				font-size: 24px;
+				color: white;
+			}
+			
+			#main{
+				grid-area: main;
+				width: 100%;
+				height: 100%;
+				background-color: gray;
+				text-align: center;
+				font-size: 24px;
+				color: white;
+			}
+			
+			#menu1{
+				grid-area: menu1;
+				width: 100%;
+				height: 100%;
+				background-color: gray;
+				text-align: center;
+				font-size: 24px;
+				color: white;
+			}
+			
+			#menu2{
+				grid-area: menu2;
+				width: 100%;
+				height: 100%;
+				background-color: gray;
+				text-align: center;
+				font-size: 24px;
+				color: white;
+			}
+			
+			#foot{
+				grid-area: foot;
+				width: 100%;
+				height: 100%;
+				background-color: LightSlateGray;
+				text-align: center;
+				font-size: 24px;
+				color: white;
+			}
+			
+		</style>
+	</head>	
+
+	<body>
+
+		<div class="grid">
+			<div id="head">This is the header of this website</div>
+				<div id="main"></div>
+					<div id="menu1"></div>
+						<div id="menu2"></div>
+							<div id="foot">This is the footer of this website</div>
+							
+		</div>
+	</body>
+</html>		

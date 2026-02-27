@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     
-    <title>Animation</title>
+    <title>Parade</title>
     <style>
         canvas{
             border: 1px black solid;
@@ -12,8 +12,8 @@
 <body>
     <canvas 
     id="myCanvas"
-    width=800 
-    height=800>
+    width=650 
+    height=650>
     
     </canvas>
     <script>
@@ -21,6 +21,10 @@
         const ctx = canvas.getContext("2d")
         let x = 1;
         let x2 = 1;
+        let y = 1;
+        let y2 = 1;
+        let z = 1;
+        let z2 = 1;
         let time = 0;
         let speed = 5;
         function animate(){
@@ -33,11 +37,27 @@
                 x2 = x2 + speed;
             }
 
-            ctx.clearRect(0,0,800,800);
+            if(time < 200){
+                y = y + speed;
+            }
+            if(time > 50){
+                y2 = y2 + speed;
+            }
+
+             if(time < 100){
+                z = z + speed;
+            }
+            if(time > 50){
+                z2 = z2 + speed;
+            }
+
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            
             ctx.fillStyle = "red";
-            ctx.fillRect(x,100,10,10);
+            ctx.fillRect(x,y,z,z);
+            
             ctx.fillStyle = "orange";
-            ctx.fillRect(x2,200,10,10);
+            ctx.fillRect(x2,y2,z2,z2);
 
             requestAnimationFrame(animate);
         }

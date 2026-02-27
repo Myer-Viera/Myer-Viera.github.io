@@ -1,0 +1,50 @@
+
+<!DOCTYPE>
+<html lang="en"
+	<head>
+		<title>My Most Creative Canvas</title>
+	<style>
+		canvas{
+			border: black 1px solid;
+			}
+	</style>
+	</head>
+	<body>
+		<h1>This is Abstract Art</h1>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+			<script>
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+				
+				//draw a blue circle
+				ctx.fillStyle = "blue";
+				ctx.beginPath();
+				ctx.arc(400,500,100,0,2*Math.PI);
+				ctx.fill();	
+
+				//draw a blue circle
+				ctx.fillStyle = "blue";
+				ctx.beginPath();
+				ctx.arc(600,500,100,0,2*Math.PI);
+				ctx.fill();
+
+				//draw a yellow, rotated ellipse
+				ctx.fillStyle = "yellow";
+				ctx.beginPath();
+				ctx.ellipse(500, 300, 200, 100, -Math.PI/2, 0, 2*Math.PI);
+				ctx.fill();
+
+				//draw some jiz
+				ctx.fillStyle = "pink";
+				ctx.fillRect(450,50,10,10);
+					
+				ctx.fillStyle = "pink";
+				ctx.fillRect(500,50,10,10);
+
+				
+				ctx.fillStyle = "pink";
+				ctx.fillRect(550,75,10,10);
+			</script>
+	</body>
+</html>	

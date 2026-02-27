@@ -1,0 +1,57 @@
+<!DOCTYPE>
+<html lang="en"
+	<head>
+		<title>My First Canvas</title>
+	<style>
+		canvas{
+			border: black 1px solid;
+			}
+	</style>
+	</head>
+	<body>
+		<h1>This is Abstract Art</h1>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+			<script>
+				const canvas = document.getElementById("canvas");
+				const ctx = canvas.getContext("2d");
+				
+				//draw a green rectangle
+				ctx.fillStyle = "green";
+				ctx.fillRect(100,100,200,300);
+
+				//draw a red rectangle
+				ctx.fillStyle = "red";
+				ctx.fillRect(350,100,100,100);
+				
+				//draw a blue circle
+				ctx.fillStyle = "blue";
+				ctx.beginPath();
+				ctx.arc(400,400,100,0,2*Math.PI);
+				ctx.fill();
+
+				//draw a orange ellipse
+				ctx.fillStyle = "Orange";
+				ctx.beginPath();
+				ctx.ellipse(500, 650, 200, 100, 0, 0, 2*Math.PI);
+				ctx.fill();
+
+				//draw a yellow, rotated ellipse
+				ctx.fillStyle = "yellow";
+				ctx.beginPath();
+				ctx.ellipse(600, 300, 200, 100, -Math.PI/2, 0, 2*Math.PI);
+				ctx.fill();
+				
+				//draw a purple triangle
+				ctx.fillStyle = "purple";
+				ctx.beginPath();
+				ctx.moveTo(750, 50);
+				ctx.lineTo(800, 150);
+				ctx.lineTo(700, 150);
+				ctx.lineTo(750, 50);
+				ctx.fill();
+
+			</script>	
+
+	</body>
+</html>

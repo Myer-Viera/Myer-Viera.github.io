@@ -1,0 +1,26 @@
+table, td, tr, th
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: Goldenrod;
+	}
+	body{
+		background-color: LightSeaGreen;
+		font-family: "Times New Roman", serif;
+	}
+	h1{
+		background-color:PapayaWhip;
+		padding: 10px;
+		padding-left: 5px;
+		margin-top: 20px;
+	}
+	#info{
+		background-color:LightSteelBlue;
+	}
+	.highlight{
+		background-color: BurlyWood;
+	}
+	#zoo{
+		text-decoration: underline;
+		text-decoration-style: wavy;
+	}

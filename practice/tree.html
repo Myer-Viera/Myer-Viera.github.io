@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<script src="../js/validate.js"></script>
+		<title>A pretty tree</title>
+		<style>
+			body{
+				background-image: linear-gradient(to bottom, red, green);
+				height:100vw;
+			}
+			#container{
+				position: relative;
+				width: 600px;
+				height: 800px;
+				display: block;
+				margin: auto;
+				/*background-color: white;*/
+			}
+			#tree{
+				width: 0px;
+				height: 0px;
+				border-bottom: 800px solid green;
+				border-left: 300px solid transparent;
+				border-right: 300px solid transparent;
+			}
+			#box{
+				position: absolute;
+				background-color: red;
+				width: 50px;
+				height: 50px;
+				left: 250px;
+				top: 500px;
+			}
+			.sphere {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				left: 200px;
+				top: 100px;
+  				aspect-ratio: 1;
+  				border-radius: 50%;
+  				background: radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 90%) 
+    pink;
+ 			}
+			#star{
+
+			}
+			#heart{
+
+			}
+			#triagle{
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="tree">
+				<div id="box">
+					<div class="sphere">
+						<div id="star">
+							<div id="heart">
+								<div id="triangle">
+
+								</div>	
+							</div>
+						</div>	
+					</div>	
+				</div>	
+			</div> 
+		</div>
+	</body>
+</html>
+
+		
