@@ -6,8 +6,15 @@ This game takes place at camp Airy.
 
 ## Map
 
+flowchart TD
+    B[Bunk] -->|Get Water Bottle & Shoes| H(Go Down Hill)
+    CA -->|Go Down Ankle-Breaker| F[Football Field]
+    H -->CA[CA rest stop]
+    CA -->|Follow Path| O[Pool]
+    O -->|Go Across Soccer Field| G[Gym]
+    F -->|Go to the Gym| G[Gym]
 
-The player starts at the bunks, and then is directed down village row.
+The player starts at the bunks, and then is directed down the hill.
 They can explore, but must eventually make their way to the gym.
 
 ## Story
@@ -16,7 +23,7 @@ at the begining you start when the bell rings to go to first period, you then ha
 ## Global Variables
 
 The most important variables are
-`____` and `____`, both
+`Water Bottle` and `Tennis Shoes`, both
 booleans that track progress in the
 story. Depending on these two variables,
 some rooms will display different things.
