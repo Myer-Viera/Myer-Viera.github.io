@@ -18,7 +18,7 @@ The player starts at the bunks, and then is directed down the hill.
 They can explore, but must eventually make their way to the gym.
 
 ## Story
-at the begining you start when the bell rings to go to first period, you then have to make your way from village row down to the gym.
+At the begining you start when the bell rings to go to first period, you then have to make your way from your bunk down to the gym.
 
 ## Global Variables
 

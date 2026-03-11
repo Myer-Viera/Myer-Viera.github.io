@@ -8,26 +8,26 @@ let gameActive = true; //this variable is required.
 
 
 //Make one function for each location
-function locationA() {
+function Bunk() {
     clear();
-    print("\nYou are in location A!");
+    print("\nYou are in the bunk!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationB");
+        "\n\tThe_Hill");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationb") {
-            locationB();
+        if (input.toLowerCase() === "The_Hill") {
+            The_Hill();
         } else {
             stayHere();
-            waitThenCall(locationA);
+            waitThenCall(Bunk);
         }
     }
     waitForInput(processInput);
 }
 
-function locationB() {
+function The_Hill() {
     clear();
-    print("\nYou are in location B!");
+    print("\nYou are in The Hill!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tlocationC" +
         "\n\tlocationD");
@@ -35,11 +35,9 @@ function locationB() {
     function processInput(input){
           if (input.toLowerCase() === "locationc") {
             locationC();
-        } else if (input.toLowerCase() === "locationd") {
-            locationD();
         } else {
             stayHere();
-            waitThenCall(locationB);
+            waitThenCall(The_Hill);
         }
     }
     waitForInput(processInput);
