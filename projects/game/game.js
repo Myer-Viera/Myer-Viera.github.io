@@ -3,75 +3,93 @@ let gameActive = true; //this variable is required.
 
 //Declare your other global variables here
 
-
 //If you need, add any "helper" functions here
 
 
 //Make one function for each location
-function Bunk() {
+function BunkPorch() {
     clear();
-    print("\nYou are in the bunk!");
+    print("\nYou are on the porch of your bunk!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tThe_Hill");
+        "\n\tTheHill" +
+        "\n\tInsideTheBunk");
     
     function processInput(input){
-        if (input.toLowerCase() === "The_Hill") {
-            The_Hill();
+        if (input.toLowerCase() === "thehill") {
+            TheHill();
+        }
+        if (input.toLowerCase() === "insidethebunk") {
+            InsideTheBunk();    
         } else {
             stayHere();
-            waitThenCall(Bunk);
+            waitThenCall(BunkPorch);
         }
     }
     waitForInput(processInput);
 }
 
-function The_Hill() {
+function TheHill() {
     clear();
-    print("\nYou are in The Hill!");
+    print("\nYou are on The Hill!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationC" +
-        "\n\tlocationD");
+        "\n\tCARestStop");
     
     function processInput(input){
-          if (input.toLowerCase() === "locationc") {
-            locationC();
+          if (input.toLowerCase() === "careststop") {
+            CARestStop();
         } else {
             stayHere();
-            waitThenCall(The_Hill);
+            waitThenCall(TheHill);
+        }
+    }
+    waitForInput(processInput);
+
+}function InsideTheBunk() {
+    clear();
+    print("\nYou are in Inside The Bunk!");
+    print("\nWhat do you want to do? Say one of these choices:" +
+        "\n\tBunkPorch" +
+        "\n\tGetWater");
+    
+    function processInput(input){
+          if (input.toLowerCase() === "bunkporch") {
+            BunkPorch();
+        } else {
+            stayHere();
+            waitThenCall(InsideTheBunk);
+        }
+    }
+    waitForInput(processInput);
+}
+function CARestStop() {
+    clear();
+    print("\nYou are in CA_Rest_Stop!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tFootballField");
+    
+    function processInput(input){
+        if (input.toLowerCase() === "footballfield") {
+            FootballField();
+        } else {
+            stayHere();
+            waitThenCall(CARestStop);
         }
     }
     waitForInput(processInput);
 }
 
-function locationC() {
+function FootballField() {
     clear();
-    print("\nYou are in location C!");
+    print("\nYou are in Football_Field!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationD");
+        "\n\tGym");
     
     function processInput(input){
-        if (input.toLowerCase() === "locationd") {
-            locationD();
+        if (input.toLowerCase() === "gym") {
+            Gym();
         } else {
             stayHere();
-            waitThenCall(locationC);
-        }
-    }
-    waitForInput(processInput);
-}
-
-function locationD() {
-    clear();
-    print("\nYou are in location D!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tlocationE");
-    
-    function processInput(input){
-        if (input.toLowerCase() === "locatione") {
-            locationE();
-        } else {
-            stayHere();
-            waitThenCall(locationD);
+            waitThenCall(FootballField);
         }
     }
     waitForInput(processInput);
@@ -83,7 +101,7 @@ function start(){
     print("Welcome to my game! Press any key to start");
 
     function processInput(input){
-            locationA();
+            BunkPorch();
     }
     waitForInput(processInput);
 }
