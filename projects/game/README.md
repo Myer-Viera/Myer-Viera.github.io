@@ -7,9 +7,10 @@ This game takes place at camp Airy.
 ## Map
 
 flowchart TD
-    B[BunkPorch] -->|Water & Shoes| H(GoDownHill)
+    B[BunkPorch] -->H(TheHill)
+    B[BunkPorch] -->I[InsideTheBunk] 
     CA -->|GoDownAnkle-Breaker| F[FootballField]
-    H -->CA[CArestsStop]
+    H -->CA[CARestStop]
     CA -->|FollowPath| O[Pool]
     F -->|GoAcrossSoccerField| G[Gym]
     O -->|GoToTheGym| G[Gym]
