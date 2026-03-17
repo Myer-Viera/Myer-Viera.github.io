@@ -45,6 +45,7 @@ function InsideTheBunk() {
     }
     waitForInput(processInput);
 }
+
 function TheHill() {
     clear();
     print("\nYou are on The Hill!");
@@ -66,12 +67,16 @@ function CARestStop() {
     clear();
     print("\nYou are in CA_Rest_Stop!");
     print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tFootballField");
+        "\n\tFootballField" +
+        "\n\tThePool");
     
     function processInput(input){
         if (input.toLowerCase() === "footballfield") {
             FootballField();
-        } else {
+        }
+        else if (input.toLowerCase() === "thepool") {
+            ThePool();    
+        }else{
             stayHere();
             waitThenCall(CARestStop);
         }
@@ -85,19 +90,40 @@ function FootballField() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tGym");
     
-function Pool() {
-    clear();
-    print("\nYou are in Pool!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tGym");
-
-function Gym() {
-    clear();
-    print("\nYou are in Gym!");
-    print("\nYou have gotten to first period! Now you can play some basketball or dodgeball!");                
+    function processInput(input){
+        if (input.toLowerCase() === "gym") {
+            Gym();
+        } else {
+            stayHere();
+            waitThenCall(FootballField);
+        }
     }
     waitForInput(processInput);
 }
+
+function ThePool() {
+    clear();
+    print("\nYou are at The Pool!");
+    print("\nWhere do you want to go next? :" +
+        "\n\tGym");
+    
+    function processInput(input){
+          if (input.toLowerCase() === "gym") {
+            Gym();
+        } else {
+            stayHere();
+            waitThenCall(ThePool);
+        }
+    }
+    waitForInput(processInput);
+}
+
+function Gym() {
+    clear();
+    print("\nYou are at the Gym!");
+    print("\nYou are at first period! Now you can play some basketball!");
+}
+
 //finally, make sure you customize this to tell it what should happen at the
 //very start. For this simple example, any input will bring you
 //to locationA
