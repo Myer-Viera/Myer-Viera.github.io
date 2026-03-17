@@ -20,7 +20,7 @@ function BunkPorch() {
         }
         if (input.toLowerCase() === "insidethebunk") {
             InsideTheBunk();    
-        } else {
+        }else{
             stayHere();
             waitThenCall(BunkPorch);
         }
@@ -28,23 +28,7 @@ function BunkPorch() {
     waitForInput(processInput);
 }
 
-function TheHill() {
-    clear();
-    print("\nYou are on The Hill!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tCARestStop");
-    
-    function processInput(input){
-          if (input.toLowerCase() === "careststop") {
-            CARestStop();
-        } else {
-            stayHere();
-            waitThenCall(TheHill);
-        }
-    }
-    waitForInput(processInput);
-
-}function InsideTheBunk() {
+function InsideTheBunk() {
     clear();
     print("\nYou are in Inside The Bunk!");
     print("\nWhat do you want to do? Say one of these choices:" +
@@ -61,6 +45,23 @@ function TheHill() {
     }
     waitForInput(processInput);
 }
+function TheHill() {
+    clear();
+    print("\nYou are on The Hill!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tCARestStop");
+    
+    function processInput(input){
+          if (input.toLowerCase() === "careststop") {
+            CARestStop();
+        } else {
+            stayHere();
+            waitThenCall(TheHill);
+        }
+    }
+    waitForInput(processInput);
+}
+
 function CARestStop() {
     clear();
     print("\nYou are in CA_Rest_Stop!");

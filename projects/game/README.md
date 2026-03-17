@@ -6,6 +6,7 @@ This game takes place at camp Airy.
 
 ## Map
 
+```mermaid
 flowchart TD
     B[BunkPorch] -->H(TheHill)
     B[BunkPorch] -->I[InsideTheBunk] 
@@ -14,6 +15,7 @@ flowchart TD
     CA -->|FollowPath| O[Pool]
     F -->|GoAcrossSoccerField| G[Gym]
     O -->|GoToTheGym| G[Gym]
+```
 
 The player starts at the bunks, and then is directed down the hill.
 They can explore, but must eventually make their way to the gym.
