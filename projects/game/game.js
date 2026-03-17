@@ -18,7 +18,7 @@ function BunkPorch() {
         if (input.toLowerCase() === "thehill") {
             TheHill();
         }
-        if (input.toLowerCase() === "insidethebunk") {
+        else if (input.toLowerCase() === "insidethebunk") {
             InsideTheBunk();    
         }else{
             stayHere();
@@ -85,13 +85,16 @@ function FootballField() {
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tGym");
     
-    function processInput(input){
-        if (input.toLowerCase() === "gym") {
-            Gym();
-        } else {
-            stayHere();
-            waitThenCall(FootballField);
-        }
+function Pool() {
+    clear();
+    print("\nYou are in Pool!");
+    print("\nWhere do you want to go next? Say one of these choices:" +
+        "\n\tGym");
+
+function Gym() {
+    clear();
+    print("\nYou are in Gym!");
+    print("\nYou have gotten to first period! Now you can play some basketball or dodgeball!");                
     }
     waitForInput(processInput);
 }
