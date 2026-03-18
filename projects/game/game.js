@@ -2,7 +2,8 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 
 //Declare your other global variables here
-
+let hasWater = false;
+let hasShoes = false;
 //If you need, add any "helper" functions here
 
 
@@ -12,14 +13,20 @@ function BunkPorch() {
     print("\nYou are on the porch of your bunk!");
     print("\nWhere do you want to go next? Say one of these choices:" +
         "\n\tTheHill" +
-        "\n\tInsideTheBunk");
+        "\n\tInsideTheBunk" +
+        "\n\tGetShoes");
     
     function processInput(input){
         if (input.toLowerCase() === "thehill") {
             TheHill();
         }
         else if (input.toLowerCase() === "insidethebunk") {
-            InsideTheBunk();    
+            InsideTheBunk();  
+        }
+        else if (input.toLowerCase() === "getshoes") {
+            hasShoes = true;
+            print("\nYou got Shoes! Do you have water?");
+            waitThenCall(InsideTheBunk);      
         }else{
             stayHere();
             waitThenCall(BunkPorch);
@@ -38,6 +45,11 @@ function InsideTheBunk() {
     function processInput(input){
           if (input.toLowerCase() === "bunkporch") {
             BunkPorch();
+          }
+          else if (input.toLowerCase() === "getwater") {
+            hasWater = true;
+            print("\nYou got water! Now you can go down the hill!");
+            waitThenCall(InsideTheBunk);  
         } else {
             stayHere();
             waitThenCall(InsideTheBunk);
@@ -75,14 +87,20 @@ function CARestStop() {
             FootballField();
         }
         else if (input.toLowerCase() === "thepool") {
-            ThePool();    
-        }else{
+            ThePool();
+        }
+        /*
+        else if (!hasShoes || !hasWater) {
+            print("\nYou don't have both Shoes and Water! Go get them!");
+            waitThenCall(BunkPorch);   
+        }
+        */
+         else{
             stayHere();
             waitThenCall(CARestStop);
         }
     }
     waitForInput(processInput);
-}
 
 function FootballField() {
     clear();
@@ -121,7 +139,7 @@ function ThePool() {
 function Gym() {
     clear();
     print("\nYou are at the Gym!");
-    print("\nYou are at first period! Now you can play some basketball!");
+    print("\nYou made it to the gym on time! Now you can play some basketball!");
 }
 
 //finally, make sure you customize this to tell it what should happen at the
@@ -134,4 +152,5 @@ function start(){
             BunkPorch();
     }
     waitForInput(processInput);
+}
 }
