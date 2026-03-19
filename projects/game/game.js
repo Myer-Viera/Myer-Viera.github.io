@@ -26,7 +26,7 @@ function BunkPorch() {
         else if (input.toLowerCase() === "getshoes") {
             hasShoes = true;
             print("\nYou got Shoes! Do you have water?");
-            waitThenCall(InsideTheBunk);      
+            waitThenCall(BunkPorch);      
         }else{
             stayHere();
             waitThenCall(BunkPorch);
@@ -77,31 +77,28 @@ function TheHill() {
 
 function CARestStop() {
     clear();
-    print("\nYou are in CA_Rest_Stop!");
-    print("\nWhere do you want to go next? Say one of these choices:" +
-        "\n\tFootballField" +
-        "\n\tThePool");
     
     function processInput(input){
-        if (input.toLowerCase() === "footballfield") {
-            FootballField();
-        }
-        else if (input.toLowerCase() === "thepool") {
-            ThePool();
-        }
-        /*
-        else if (!hasShoes || !hasWater) {
-            print("\nYou don't have both Shoes and Water! Go get them!");
-            waitThenCall(BunkPorch);   
-        }
-        */
-         else{
-            stayHere();
-            waitThenCall(CARestStop);
+        if (!hasShoes || !hasWater) {
+            print("\nYou don't have or Shoes and Water! Go get them!");
+            waitThenCall(BunkPorch);
+        } else {
+        print("\nYou are in CA_Rest_Stop!");
+        print("\nWhere do you want to go next? Say one of these choices:" +
+            "\n\tFootballField" +
+            "\n\tThePool");
+                if (input.toLowerCase() === "footballfield") {
+                    FootballField();
+                } else if (input.toLowerCase() === "thepool") {
+                    ThePool();
+                } else {
+                    stayHere();
+                    waitThenCall(CARestStop);
+                }
         }
     }
     waitForInput(processInput);
-
+}   
 function FootballField() {
     clear();
     print("\nYou are in Football_Field!");
@@ -146,11 +143,10 @@ function Gym() {
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
-    print("Welcome to my game! Press any key to start");
-
+    print(" Welcome to my game! Press any key to start")
+    print("(Disclaimer: If a screen goes blank, just press any key to continue.)");
     function processInput(input){
             BunkPorch();
     }
     waitForInput(processInput);
-}
 }
