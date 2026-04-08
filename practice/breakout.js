@@ -54,9 +54,6 @@ function drawBricks(){
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       //TODO: use the variables above to write the code that draws the bricks.
-      for(let c = 0; c < brickColumnCount; c++){
-    for(let r = 50; r < 150; r += 50){
-        ctx.fillRect(x, y, 50, 20);
       //this should be a single function call to ctx.fillRect();
         ctx.fillRect(
             brickOffsetLeft + c*(brickWidth + brickPadding),
